@@ -10,7 +10,7 @@ pub mod simulations;
 
 /// Represents command-line arguments passed to this binary.
 #[derive(Parser)]
-#[clap(name = "Excalibur")]
+#[clap(name = "V3 Core")]
 #[clap(version = env!("CARGO_PKG_VERSION"))]
 #[clap(about = "Simulation driven development.", long_about = None)]
 #[clap(author)]
