@@ -12,6 +12,7 @@ use crate::{agents::Agents, settings::parameters::Fixed};
 
 pub mod counter;
 pub mod price_path_simulation;
+pub mod v3core;
 
 use crate::settings::SimulationConfig;
 use anyhow::Result;
@@ -37,6 +38,7 @@ pub struct Simulation {
 pub enum SimulationType {
     SimulatedPricePath,
     Counter,
+    V3Core,
 }
 
 impl SimulationType {
@@ -50,6 +52,7 @@ impl SimulationType {
                 price_path_simulation::setup(config.clone()).await?
             }
             SimulationType::Counter => counter::setup(config.clone()).await?,
+            SimulationType::V3Core => v3core::setup(config.clone()).await?,
         };
         match looper(simulation.agents, simulation.steps).await {
             Result::Ok(_) => {
