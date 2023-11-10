@@ -4,9 +4,15 @@ pub mod block_admin;
 pub mod counter_agent;
 pub mod price_changer;
 pub mod token_admin;
+pub mod factory_deployer;
 
 use std::marker::{Send, Sync};
+use std::sync::Arc;
 
+use arbiter_core::{
+    environment::Environment,
+    middleware::RevmMiddleware,
+};
 use crate::settings::parameters::Fixed;
 
 /// Universal agent methods for interacting with the simulation environment or

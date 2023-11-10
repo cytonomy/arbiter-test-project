@@ -4,9 +4,10 @@ use anyhow::Result;
 use clap::{ArgAction, CommandFactory, Parser, Subcommand};
 
 pub mod agents;
-pub mod bindings;
+pub mod v3bindings;
 pub mod settings;
 pub mod simulations;
+pub mod bindings;   
 
 /// Represents command-line arguments passed to this binary.
 #[derive(Parser)]
