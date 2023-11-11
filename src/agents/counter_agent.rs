@@ -1,7 +1,4 @@
-use arbiter_core::{environment::Environment, middleware::RevmMiddleware};
-use bindings::counter::Counter;
-use std::sync::Arc;
-
+use crate::bindings::counter::Counter;
 use super::*;
 
 /// A structure representing a counter agent.
