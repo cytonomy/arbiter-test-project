@@ -10,7 +10,7 @@ ethers = { version = "2.0.10" }
 serde_json = { version = "1.0.107" }
 serde = { version = "1.0.189", features = ["derive"] }
 anyhow = { version = "1.0.75" }
-async-trait = "0.1.74"
+async-trait = "0.1.76"
 config = "0.13.3"
 clap = { version = "4.4.6", features = ["derive"] }
 
